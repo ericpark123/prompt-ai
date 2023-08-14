@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+// Import authorization
 import { ClerkProvider } from '@clerk/nextjs'
 
 
@@ -17,6 +18,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+    // Wrap authorization
     <ClerkProvider>
       <html lang="en">
         <body className={inter.className}>{children}</body>
